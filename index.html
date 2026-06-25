@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home Automation</title>
+
+<style>
+body{
+  font-family: Arial, sans-serif;
+  background:#f2f2f2;
+  text-align:center;
+}
+
+.container{
+  margin-top:50px;
+}
+
+.card{
+  background:white;
+  width:300px;
+  margin:20px auto;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0px 0px 10px #ccc;
+}
+
+button{
+  padding:10px 20px;
+  margin:5px;
+  border:none;
+  border-radius:5px;
+  font-size:16px;
+  cursor:pointer;
+}
+
+.on{
+  background:green;
+  color:white;
+}
+
+.off{
+  background:red;
+  color:white;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>🏠 ESP32 Home Automation</h1>
+
+<div class="container">
+
+<div class="card">
+<h2>💡 Light</h2>
+<button class="on" onclick="lightOn()">ON</button>
+<button class="off" onclick="lightOff()">OFF</button>
+</div>
+
+<div class="card">
+<h2>🌀 Fan</h2>
+<button class="on" onclick="fanOn()">ON</button>
+<button class="off" onclick="fanOff()">OFF</button>
+</div>
+
+<div class="card">
+<h2>🌀 AC</h2>
+<button class="on" onclick="ACOn()">ON</button>
+<button class="off" onclick="ACOff()">OFF</button>
+</div>
+
+
+<div class="card">
+<h2>🌀 Motor</h2>
+<button class="on" onclick="MotorOn()">ON</button>
+<button class="off" onclick="MotorOff()">OFF</button>
+</div>
+
+
+
+</div>
+
+<script>
+
+const apiKey = "OHA65HXE6T1CCEDN";
+
+function lightOn(){
+  fetch("https://api.thingspeak.com/update?api_key=OHA65HXE6T1CCEDN&field1=1");
+  alert("Light ON");
+}
+
+function lightOff(){
+  fetch("https://api.thingspeak.com/update?api_key=OHA65HXE6T1CCEDN&field1=0");
+  alert("Light OFF");
+}
+
+function fanOn(){
+  fetch("https://api.thingspeak.com/update?api_key=OHA65HXE6T1CCEDN&field2=1");
+  alert("Fan ON");
+}
+
+function fanOff(){
+  fetch("https://api.thingspeak.com/update?api_key=OHA65HXE6T1CCEDN&field2=0");
+  alert("Fan OFF");
+}
+function acOn(){
+  fetch("https://api.thingspeak.com/update?api_key=OHA65HXE6T1CCEDN&field3=1");
+  alert("Fan ON");
+}
+
+function acoff(){
+  fetch("https://api.thingspeak.com/update?api_key=OHA65HXE6T1CCEDN&field3=0");
+  alert("Fan OFF");
+}
+function motorOn(){
+  fetch("https://api.thingspeak.com/update?api_key=OHA65HXE6T1CCEDN&field4=1");
+  alert("Fan ON");
+}
+
+function motoroff(){
+  fetch("https://api.thingspeak.com/update?api_key=OHA65HXE6T1CCEDN&field4=0");
+  alert("Fan OFF");
+}
+
+</script>
+
+</body>
+</html>
