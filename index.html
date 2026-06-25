@@ -82,45 +82,28 @@ button{
 
 <script>
 
-const apiKey = "OHA65HXE6T1CCEDN";
+const apiKey = "V7L2SCSB35TOUUH3";
 
 function lightOn(){
-  fetch("https://api.thingspeak.com/update?api_key=OHA65HXE6T1CCEDN&field1=1");
+  fetch("https://api.thingspeak.com/update?api_key=V7L2SCSB35TOUUH3&field1=1");
   alert("Light ON");
 }
 
 function lightOff(){
-  fetch("https://api.thingspeak.com/update?api_key=OHA65HXE6T1CCEDN&field1=0");
+  fetch("https://api.thingspeak.com/update?api_key=V7L2SCSB35TOUUH3&field1=0");
   alert("Light OFF");
 }
 
 function fanOn(){
-  fetch("https://api.thingspeak.com/update?api_key=OHA65HXE6T1CCEDN&field2=1");
+  fetch("https://api.thingspeak.com/update?api_key=V7L2SCSB35TOUUH3&field1=1");
   alert("Fan ON");
 }
 
 function fanOff(){
-  fetch("https://api.thingspeak.com/update?api_key=OHA65HXE6T1CCEDN&field2=0");
+  fetch("https://api.thingspeak.com/update?api_key=V7L2SCSB35TOUUH3&field1=0");
   alert("Fan OFF");
-}
-function acOn(){
-  fetch("https://api.thingspeak.com/update?api_key=OHA65HXE6T1CCEDN&field3=1");
-  alert("Fan ON");
 }
 
-function acoff(){
-  fetch("https://api.thingspeak.com/update?api_key=OHA65HXE6T1CCEDN&field3=0");
-  alert("Fan OFF");
-}
-function motorOn(){
-  fetch("https://api.thingspeak.com/update?api_key=OHA65HXE6T1CCEDN&field4=1");
-  alert("Fan ON");
-}
-
-function motoroff(){
-  fetch("https://api.thingspeak.com/update?api_key=OHA65HXE6T1CCEDN&field4=0");
-  alert("Fan OFF");
-}
 
 </script>
 
